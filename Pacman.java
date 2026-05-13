@@ -15,5 +15,18 @@ public class Pacman extends Character{
     public void updateDirection(char d){
         direction = d;
         
+        if(d == 'U'){
+            velocityX = 0;
+            velocityY = -GameConfig.TILE_SIZE/4;
+        } else if(d == 'D'){
+            velocityX = 0;
+            velocityY = GameConfig.TILE_SIZE/4;
+        } else if(d == 'L'){
+            velocityY = 0;
+            velocityX = -GameConfig.TILE_SIZE/4;
+        } else if(d == 'R'){
+            velocityY = 0;
+            velocityX = GameConfig.TILE_SIZE/4;
+        }
     }
 }
