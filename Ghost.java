@@ -5,5 +5,12 @@ public class Ghost extends Character{
         super(image, x, y, w, h);
     }
 
+    @Override
+    public void move(){
+        setX(getX() + velocityX);
+        setY(getY() + velocityY);
+    }
+
+    
     
 }
