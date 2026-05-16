@@ -35,4 +35,21 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         timer = new Timer(50, this);
         timer.start();
     }
+
+    void loadImages(){
+        wallImage = new ImageIcon("assets/wall.png").getImage();
+        blueGhost = new ImageIcon("assets/blueGhost.png").getImage();
+        orangeGhost = new ImageIcon("assets/orangeGhost.png").getImage();
+        pinkGhost = new ImageIcon("assets/pinkGhost.png").getImage();
+        redGhost = new ImageIcon("assets/redGhost.png").getImage();
+
+        pacUp = new ImageIcon("assets/pacmanUp.png").getImage();
+        pacDown = new ImageIcon("assets/pacmanDown.png").getImage();
+        pacLeft = new ImageIcon("assets/pacmanLeft.png").getImage();
+        pacRight = new ImageIcon("assets/pacmanRight.png").getImage();
+
+        powerFoodImage = new ImageIcon("assets/powerFoodImage.png").getImage();
+        cherryImage = new ImageIcon("assets/cherryImage.png").getImage();
+        cherry2Image = new ImageIcon("assets/cherry2Image.png").getImage();
+    }
 }
