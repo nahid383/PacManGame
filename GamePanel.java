@@ -79,4 +79,23 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             }
         }
     }
+
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+
+        g.drawImage(pacman.getImage(), pacman.getX(), pacman.getY(), null);
+
+        for(Wall w : walls){
+            g.drawImage(w.getImage(), w.getX(), w.getY(), null);
+        }
+
+
+        for(Ghost g1 : ghosts){
+            g.drawImage(g1.getImage(), g1.getX(), g1.getY(), null);
+        }
+
+        for(Food f : foods){
+            g.drawImage(f.getImage(), f.getX(), f.getY(), null);
+        }
+    }
 }
