@@ -52,4 +52,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         cherryImage = new ImageIcon("assets/cherryImage.png").getImage();
         cherry2Image = new ImageIcon("assets/cherry2Image.png").getImage();
     }
+
+    
 }
