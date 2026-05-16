@@ -53,5 +53,30 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
         cherry2Image = new ImageIcon("assets/cherry2Image.png").getImage();
     }
 
-    
+    void loadMap(){
+        for(int i=0; i<GameConfig.ROW_COUNT; i++){
+            for(int j=0; j<GameConfig.COLUMN_COUNT; j++){
+                char tile = MapLoader.MAP[i].charAt(c);
+
+                int x = j*GameConfig.TILE_SIZE;
+                int y = i*GameConfig.TILE_SIZE;
+
+                if(tile == 'X'){
+                    walls.add(new Wall(wallImage, x, y, 32, 32));
+                } else if(tile == 'P'){
+                    pacman = new Pacman(pacRight, x, y, 32, 32);
+                } else if(tile == 'b'){
+                    ghosts.add(new Ghost(blueGhost, x, y, 32, 32));
+                } else if(tile == 'o'){
+                    ghosts.add(new Ghost(orangeGhost, x, y, 32, 32));
+                } else if(tile == 'C'){
+                    foods.add(new Food(cherryImage, x, y, 20, 20));
+                } else if(tile == '2'){
+                    foods.add(new Food(cherry2Image, x, y, 20, 20));
+                } else if(tile == ' '){
+                    foods.add(new Food(powerFoodImage, x, y, 8, 8));
+                }
+            }
+        }
+    }
 }
