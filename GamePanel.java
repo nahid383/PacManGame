@@ -98,4 +98,26 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
             g.drawImage(f.getImage(), f.getX(), f.getY(), null);
         }
     }
+
+    public void actionPerformed( ActionEvent e){
+        repaint();
+    }
+
+    public void keyPressed(KeyEvent e){
+        if(e.getKeyCode() == KeyEvent.VK_UP){
+            pacman.updateDirection('U');
+        }
+        if(e.getKeyCode() == KeyEvent.VK_DOWN){
+            pacman.updateDirection('D');
+        }
+        if(e.getKeyCode() == KeyEvent.VK_LEFT){
+            pacman.updateDirection('L');
+        }
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+            pacman.updateDirection('R');
+        }
+    }
+
+    public void keyReleased(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {}
 }
