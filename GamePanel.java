@@ -56,7 +56,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
     void loadMap(){
         for(int i=0; i<GameConfig.ROW_COUNT; i++){
             for(int j=0; j<GameConfig.COLUMN_COUNT; j++){
-                char tile = MapLoader.MAP[i].charAt(c);
+                char tile = MapLoader.MAP[i].charAt(j);
 
                 int x = j*GameConfig.TILE_SIZE;
                 int y = i*GameConfig.TILE_SIZE;

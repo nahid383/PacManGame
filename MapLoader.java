@@ -1,5 +1,5 @@
 public class MapLoader{
-    public static final String[] TILE_MAP = {
+    public static final String[] MAP = {
         "XXXXXXXXXXXXXXXXXXX",
         "X        X        X",
         "X XX XXX X XXX XX X",
